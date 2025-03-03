@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const voucherController = require("../Controllers/voucher");
+const VoucherController = require("../Controllers/voucher");
 
 
-router.post("/addvoucher",voucherController.addvoucher);
-router.get("/getvoucher", voucherController.getvoucher);
-router.post("/deletevoucher/:id", voucherController.postdeletevoucher);
-router.post("/editvoucher/:id", voucherController.editvoucher);
-router.post("/couponcode/:id", voucherController.couponcode);
+router.post("/addvoucher",VoucherController.addvoucher);
+router.get("/getvoucher", VoucherController.getvoucher);
+router.post("/deletevoucher/:id", VoucherController.postdeletevoucher);
+router.post("/editvoucher/:id", VoucherController.editvoucher);
+router.post("/couponcode/:id", VoucherController.couponcode);
 
 
 module.exports = router;

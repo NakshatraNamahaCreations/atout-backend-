@@ -1,22 +1,22 @@
 const express = require("express");
 const router = express.Router();
-const productController = require("../Controllers/productController");
+const ProductController = require("../Controllers/productController");
 
 // Create product
-router.post("/products", productController.createProduct);
+router.post("/products", ProductController.createProduct);
 
 // Get all products
-router.get("/products", productController.getProducts);
+router.get("/products", ProductController.getProducts);
 
-router.get("/products/check-sku", productController.checkSKUExists);
+router.get("/products/check-sku", ProductController.checkSKUExists);
 
-router.get("/last-four-maheshwari", productController.getLastFourMaheshwariSarees);
+router.get("/last-four-maheshwari", ProductController.getLastFourMaheshwariSarees);
 // Update a product
-router.put('/products/:productId', productController.updateProduct);
+router.put('/products/:productId', ProductController.updateProduct);
 
-router.get("/sold-products", productController.getSoldProducts);
+router.get("/sold-products", ProductController.getSoldProducts);
 
 // Delete a product
-router.delete("/products/:productId", productController.deleteProduct);  // Fixed the route
+router.delete("/products/:productId", ProductController.deleteProduct);  // Fixed the route
 
 module.exports = router;
