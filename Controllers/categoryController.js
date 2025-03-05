@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Category = require('../models/Category');
 
-// Create Category
+
 exports.addCategory = async (req, res) => {
     try {
         const { category, status } = req.body;  
