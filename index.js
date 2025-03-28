@@ -79,6 +79,9 @@ const wishlistRoutes = require('./routes/wishlistRoutes');
 const voucher = require('./routes/voucher');
 const reviewRoutes = require("./routes/reviewRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const paymentRoutes = require('./routes/paymentRoutes');
+
+
 
 app.use("/api/", productRoutes);
 app.use("/api/categories", categoryRoutes);
@@ -89,13 +92,14 @@ app.use('/api', wishlistRoutes);
 app.use('/api', voucher)
 app.use("/api", reviewRoutes); 
 app.use("/api/admin", adminRoutes);
+app.use('/api/payments', paymentRoutes);
 
 app.use((req, res, next) => {
   res.status(404).json({ error: "Route not found" });
 });
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });

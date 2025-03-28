@@ -38,7 +38,7 @@ const orderSchema = new mongoose.Schema({
   phoneNumber: { type: String, required: true },
   cartItems: [
     {
-      images: [{ type: String, required: true }], // Ensure it's an array
+      images: [{ type: String, required: true }], 
       category: { type: String, required: true },
       name: { type: String, required: true },
       price: { type: Number, required: true },
